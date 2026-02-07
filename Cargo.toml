@@ -1,0 +1,34 @@
+[package]
+name = "messing-with-fpga"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+embassy-executor = { version = "0.9.1", features = [
+  "arch-cortex-m",
+  "executor-thread",
+  "defmt",
+] }
+embassy-time = { version = "0.5.0", features = [
+  "defmt",
+  "defmt-timestamp-uptime",
+] }
+embassy-rp = { version = "0.9.0", features = [
+  "defmt",
+  "critical-section-impl",
+  "time-driver",
+  "rp2040",
+] }
+embassy-usb = { version = "0.5.1", features = ["defmt"] }
+embassy-futures = "0.1.2"
+defmt = "1.0.1"
+defmt-rtt = "1.1.0"
+panic-probe = { version = "1.0.0", features = ["print-defmt"] }
+cortex-m = "0.7"
+cortex-m-rt = "0.7"
+embedded-io-async = "0.7.0"
+embedded-storage-async = "0.4.1"
+static_cell = "2.1.1"
+portable-atomic = {version = "1.13.1", features =["critical-section"]}
+embedded-hal-async = "1.0.0"
+
